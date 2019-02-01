@@ -1,0 +1,37 @@
+{
+  "name": "swissgrid",
+  "version": "0.0.0",
+  "description": "Transform coordinates between the Swiss projected coordinate systems (LV95/LV03) and WGS 84.",
+  "source": "src/index.js",
+  "main": "dist/swissgrid.js",
+  "unpkg": "dist/swissgrid.umd.js",
+  "module": "dist/swissgrid.mjs",
+  "scripts": {
+    "benchmarks": "npm run build && node benchmarks/index.js",
+    "build": "microbundle",
+    "eslint": "eslint .",
+    "prepare": "npm run build",
+    "start": "npm run build && node -i -e \"const swissgrid = require('./dist/swissgrid');\"",
+    "test": "jest"
+  },
+  "files": [
+    "/src",
+    "/dist"
+  ],
+  "author": "Roman Zoller",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^24.0.0",
+    "benchmark": "^2.1.4",
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.1.2",
+    "jest": "^24.0.0",
+    "microbundle": "^0.9.0",
+    "proj4": "^2.5.0"
+  }
+}
