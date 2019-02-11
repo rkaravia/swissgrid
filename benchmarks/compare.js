@@ -20,11 +20,7 @@ function comparePoint(operation, [p0, p1]) {
       })
       .add('swissgrid.fast', () => {
         result = swissgrid.fast[operation]([p0, p1]);
-      })
-      .add('swissgrid.fast (discard result)', () => {
-        swissgrid.fast[operation]([p0, p1]);
-      })
-      .add('do nothing', () => {});
+      });
 
     suite
       .on('cycle', (event) => {
