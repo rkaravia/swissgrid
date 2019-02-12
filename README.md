@@ -64,7 +64,7 @@ var yx = swissgrid.lv03.project([7, 47]);
 var lonLat = swissgrid.lv03.unproject([600000, 200000]);
 ```
 
-The approximate formulas from \[[1](#literature)\] are also available. They are 10-20x faster, but
+The approximate formulas from \[[1](#literature)\] are also available. They are ~ 5x faster (see [benchmarks](BENCHMARKS.md)), but
 introduce an error up to 1 meter:
 
 ```javascript
