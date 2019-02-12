@@ -19,6 +19,11 @@ From \[[1](#literature)\]:
 $ npm install swissgrid
 ```
 
+Or download the library from here: https://unpkg.com/swissgrid
+
+The unpkg URL forwards to the latest version, which can also be used to
+[generate an SRI Hash](https://www.srihash.org/) and include the library using the `<script>` tag.
+
 ## Usage
 
 ### Browser
