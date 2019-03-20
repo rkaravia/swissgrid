@@ -5,8 +5,8 @@ import {
 } from '../common/util';
 
 // Constants
-const { a } = bessel;
-const f = (a - bessel.b) / a;
+const { a, n } = bessel;
+const f = 1 / n;
 
 /**
  * Source:

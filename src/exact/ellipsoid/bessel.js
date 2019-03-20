@@ -2,17 +2,16 @@ import ellipsoid from './base';
 
 /**
  * Source:
- * Bolliger J.: Die Projektionen der Schweizerischen Plan- und Kartenwerke.
- * The following values are provided on page 30, citing [Helmert 1886]:
- * a = 6377397.15500 m
- * b = 6356078.96282 m
- * See https://emuseum.gggs.ch/literatur-lv/liste-Dateien/1967_Bolliger_a.pdf
+ * Verordnung des Bundesamtes für Landestopografie über Geoinformation (GeoIV-swisstopo)
+ * The following values are provided for both CH1903 and CH1903+:
+ * a = 6 377 397.155 m
+ * f = 1/299.15281285
+ * See https://www.admin.ch/opc/de/classified-compilation/20071096/index.html#a3
  */
 
 export const a = 6377397.155;
-export const b = 6356078.96282;
+export const n = 299.15281285;
 
-const n = a / (a - b);
 const bessel = ellipsoid(a, n);
 
 const { fromCartesian, toCartesian } = bessel;

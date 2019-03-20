@@ -166,5 +166,6 @@ and WGS 84 by providing:
 ### Literature
 
 1. [Formulas and constants for the calculation of the Swiss conformal cylindrical projection and for the transformation between coordinate systems](https://www.swisstopo.admin.ch/content/swisstopo-internet/en/online/calculation-services/_jcr_content/contentPar/tabs/items/documents_publicatio/tabPar/downloadlist/downloadItems/20_1467104436749.download/refsys_e.pdf), swisstopo, December 2016
-2. [Collection of the Society for the history of Geodesy in Switzerland](https://emuseum.gggs.ch/literatur-lv/liste.htm#Landesvermessung%201903%20(LV03)), in particular:
+2. [Verordnung des Bundesamtes für Landestopografie über Geoinformation (GeoIV-swisstopo)](https://www.admin.ch/opc/de/classified-compilation/20071096/index.html)
+3. [Collection of the Society for the history of Geodesy in Switzerland](https://emuseum.gggs.ch/literatur-lv/liste.htm#Landesvermessung%201903%20(LV03)), in particular:
    - [Die Projektionen der Schweizerischen Plan- und Kartenwerke](https://emuseum.gggs.ch/literatur-lv/liste-Dateien/1967_Bolliger_a.pdf), J. Bolliger, 1967
