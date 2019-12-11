@@ -1,6 +1,6 @@
 {
   "name": "swissgrid",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Transform coordinates between the Swiss projected coordinate systems (LV95/LV03) and WGS 84.",
   "source": "src/index.js",
   "main": "dist/swissgrid.js",
