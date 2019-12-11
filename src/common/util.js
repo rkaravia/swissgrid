@@ -13,9 +13,9 @@ export function degreesToArcSeconds(degrees) {
 }
 
 export function toDegrees(radians) {
-  return radians * 180 / Math.PI;
+  return (radians * 180) / Math.PI;
 }
 
 export function toRadians(degrees) {
-  return degrees * Math.PI / 180;
+  return (degrees * Math.PI) / 180;
 }

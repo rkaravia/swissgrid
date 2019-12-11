@@ -15,7 +15,7 @@ export default function ellipsoid(a, n) {
       Nʹ = N;
       N = a / Math.sqrt(1 - e2 * (Math.sin(φ) ** 2));
       h = p / Math.cos(φ) - N;
-      φ = Math.atan(Z / ((1 - e2 * N / (N + h)) * p));
+      φ = Math.atan(Z / ((1 - (e2 * N) / (N + h)) * p));
     }
     const lat = toDegrees(φ);
     const lon = toDegrees(λ);

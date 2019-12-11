@@ -2,7 +2,7 @@ const proj4 = require('proj4');
 
 function toRadians(degrees, minutes, seconds) {
   const decimalDegrees = ((seconds / 60) + minutes) / 60 + degrees;
-  return decimalDegrees * Math.PI / 180;
+  return (decimalDegrees * Math.PI) / 180;
 }
 
 const lv95Proj4 = proj4({

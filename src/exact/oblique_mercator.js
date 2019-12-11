@@ -29,26 +29,26 @@ const λ0 = toRadians(degreesMinutesSeconds(7, 26, 22.5));
 
 // Helpers
 const E2 = 2 * f - (f ** 2);
-const R = a * Math.sqrt(1 - E2) / (1 - E2 * (Math.sin(φ0) ** 2));
-const α = Math.sqrt(1 + E2 / (1 - E2) * (Math.cos(φ0) ** 4));
+const R = (a * Math.sqrt(1 - E2)) / (1 - E2 * (Math.sin(φ0) ** 2));
+const α = Math.sqrt(1 + (E2 / (1 - E2)) * (Math.cos(φ0) ** 4));
 const b0 = Math.asin(Math.sin(φ0) / α);
 const E = Math.sqrt(E2);
 const K = Math.log(Math.tan(Math.PI / 4 + b0 / 2))
           - α * Math.log(Math.tan(Math.PI / 4 + φ0 / 2))
-          + α * E / 2 * Math.log((1 + E * Math.sin(φ0)) / (1 - E * Math.sin(φ0)));
+          + ((α * E) / 2) * Math.log((1 + E * Math.sin(φ0)) / (1 - E * Math.sin(φ0)));
 
 export function project([lon, lat]) {
   const φ = toRadians(lat);
   const λ = toRadians(lon);
   const S = α * Math.log(Math.tan(Math.PI / 4 + φ / 2))
-            - α * E / 2 * Math.log((1 + E * Math.sin(φ)) / (1 - E * Math.sin(φ)))
+            - ((α * E) / 2) * Math.log((1 + E * Math.sin(φ)) / (1 - E * Math.sin(φ)))
             + K;
   const b = 2 * (Math.atan(Math.exp(S)) - Math.PI / 4);
   const l = α * (λ - λ0);
   const bʹ = Math.asin(Math.cos(b0) * Math.sin(b) - Math.sin(b0) * Math.cos(b) * Math.cos(l));
   const lʹ = Math.atan(Math.sin(l) / (Math.sin(b0) * Math.tan(b) + Math.cos(b0) * Math.cos(l)));
   const Y = R * lʹ;
-  const X = R / 2 * Math.log((1 + Math.sin(bʹ)) / (1 - Math.sin(bʹ)));
+  const X = (R / 2) * Math.log((1 + Math.sin(bʹ)) / (1 - Math.sin(bʹ)));
   return [Y, X];
 }
 
