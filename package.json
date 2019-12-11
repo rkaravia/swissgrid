@@ -16,13 +16,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/rzoller/swissgrid"
+    "url": "git://github.com/rkaravia/swissgrid"
   },
   "files": [
     "/src",
     "/dist"
   ],
-  "author": "Roman Zoller",
+  "author": "Roman Karavia",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.7.5",
