@@ -1,3 +1,9 @@
+// Polyfill for Number.isFinite
+if (Number.isFinite === undefined) {
+  // eslint-disable-next-line no-restricted-globals
+  Number.isFinite = (value) => typeof value === 'number' && isFinite(value);
+}
+
 export const epsilon = Math.sqrt(Number.EPSILON);
 
 export function arcSecondsToDegrees(arcSeconds) {
