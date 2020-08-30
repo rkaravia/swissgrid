@@ -1,7 +1,7 @@
 import * as bessel from './ellipsoid/bessel';
 
 import {
-  epsilon, degreesMinutesSeconds, toDegrees, toRadians,
+  degreesMinutesSeconds, toDegrees, toRadians,
 } from '../common/util';
 
 // Constants
@@ -60,15 +60,19 @@ export function unproject([Y, X]) {
   const l = Math.atan(Math.sin(lʹ)
                       / (Math.cos(b0) * Math.cos(lʹ) - Math.sin(b0) * Math.tan(bʹ)));
   const λ = λ0 + l / α;
+  let errorʹ;
+  let error;
   let Sʹ;
   let S;
   let φ = b;
-  while (!(Math.abs(S - Sʹ) < epsilon)) {
+  do {
+    errorʹ = error;
     Sʹ = S;
     S = (Math.log(Math.tan(Math.PI / 4 + b / 2)) - K) / α
         + E * Math.log(Math.tan(Math.PI / 4 + Math.asin(E * Math.sin(φ)) / 2));
     φ = 2 * Math.atan(Math.exp(S)) - Math.PI / 2;
-  }
+    error = Math.abs(S - Sʹ);
+  } while (isNaN(errorʹ) || error < errorʹ);
   const lat = toDegrees(φ);
   const lon = toDegrees(λ);
   return [lon, lat];

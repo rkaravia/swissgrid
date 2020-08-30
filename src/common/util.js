@@ -4,8 +4,6 @@ if (Number.isFinite === undefined) {
   Number.isFinite = (value) => typeof value === 'number' && isFinite(value);
 }
 
-export const epsilon = 1e-12;
-
 export function arcSecondsToDegrees(arcSeconds) {
   return arcSeconds / 60 / 60;
 }
